@@ -27,6 +27,7 @@ COPY renv.lock /test-app/renv.lock
 
 # install renv & restore packages
 RUN Rscript -e 'install.packages("renv")'
+RUN Rscript -e 'renv::consent()'
 RUN Rscript -e 'renv::restore()'
 
 # expose port
