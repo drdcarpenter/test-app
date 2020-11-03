@@ -21,7 +21,7 @@ RUN apt-get update && \
 
 # copy necessary files
 ## app folder
-COPY app.R /test-app/app.R
+COPY app.R /test-app/app/app.R
 ## renv.lock file
 COPY renv.lock /test-app/renv.lock
 
