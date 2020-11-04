@@ -26,13 +26,16 @@ COPY app.R /srv/shiny-server/app/
 # COPY renv.lock /test-app/renv.lock
 
 # install renv & restore packages
+# not sure if I need this now...
 # RUN Rscript -e 'install.packages("renv")'
 # RUN Rscript -e 'renv::consent(provided = TRUE)'
 # RUN Rscript -e 'renv::restore()'
 
 # expose port
+# I think this is extraneous as well
 # EXPOSE 3838
 
 # run app on container start
+# i think this is also redundant
 # CMD ["R", "-e", "shiny::runApp('app/app.R', host = '0.0.0.0', port = 3838)"]
 
